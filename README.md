@@ -1,22 +1,28 @@
 # 🎣 Clickbait Detector AI
 
 ## 📌 Project Overview
-    This project detects clickbait headlines on news websites (e.g., CNN, BBC) in real-time. It consists of a Python Flask API (Backend) and a Google Chrome Extension (Frontend).
+This project detects clickbait headlines on news websites (e.g., CNN, BBC) in real-time. It consists of a Python Flask API (Backend) and a Google Chrome Extension (Frontend).
 
-    Developed as a CENG313 Introduction to Data Science course project at Gazi University, this system provides users with immediate visual feedback regarding the nature of the headlines they encounter on news websites. By filtering out misleading content, it aims to highlight credible information and improve the online reading experience.
+Developed as a CENG313 Introduction to Data Science course project at Gazi University, this system provides users with immediate visual feedback regarding the nature of the headlines they encounter on news websites. By filtering out misleading content, it aims to highlight credible information and improve the online reading experience.
 
 **Developers:**  Berke KOCAKAVAK, Batuhan Sami AKÇAY, Hasan GÜRSES, Türkay AYDOĞAN.
 
 ## ✨ Key Features & Technical Details
 ***High Accuracy Machine Learning Model:** Powered by a Support Vector Machine (LinearSVC) model trained on a perfectly balanced 32,000-headline dataset, achieving an impressive ~95% accuracy.
+
 ***Advanced NLP Pipeline:** Utilizes Python and NLTK for robust text preprocessing, including regex cleaning, stopword removal, WordNet lemmatization, and TF-IDF vectorization.
+
 ***Smart Heuristic Filtering:** The extension intelligently distinguishes between actual headlines and irrelevant text (like summaries or menus) by ignoring text smaller than 16px, having fewer than 4 words, or lacking bold styling.
+
 ***Real-time Visual Feedback:** Modifies the web page dynamically, labeling clickbait with a red "CLICKBAIT" badge and normal news with a green "NORMAL" badge.
 
 ## 📂 Folder Structure
 `api/`: Contains the Python server, pre-trained models (`.pkl`), and `requirements.txt`.
+
 `extension/`: Contains the Chrome Extension source code (`manifest.json`, `content.js`, etc.).
+
 `data/`: Contains the dataset used for training.
+
 `notebooks/`: Jupyter notebooks used for data analysis and model training.
 
 ## 🛠️ Requirements
